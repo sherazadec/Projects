@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scavenger.Plugins", "Scavenger.Plugins.csproj", "{C2C8C6D7-EFFD-D3D2-D972-1ABA90CC20E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scavenger", "Scavenger.csproj", "{EC8EED15-084E-A8A4-E0A7-22C89423018A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scavenger.Editor", "Scavenger.Editor.csproj", "{24AC1CDA-4AEB-364C-4C9F-256CB655C0AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2C8C6D7-EFFD-D3D2-D972-1ABA90CC20E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2C8C6D7-EFFD-D3D2-D972-1ABA90CC20E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2C8C6D7-EFFD-D3D2-D972-1ABA90CC20E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2C8C6D7-EFFD-D3D2-D972-1ABA90CC20E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC8EED15-084E-A8A4-E0A7-22C89423018A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC8EED15-084E-A8A4-E0A7-22C89423018A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC8EED15-084E-A8A4-E0A7-22C89423018A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC8EED15-084E-A8A4-E0A7-22C89423018A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24AC1CDA-4AEB-364C-4C9F-256CB655C0AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24AC1CDA-4AEB-364C-4C9F-256CB655C0AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24AC1CDA-4AEB-364C-4C9F-256CB655C0AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24AC1CDA-4AEB-364C-4C9F-256CB655C0AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

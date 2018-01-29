@@ -1,0 +1,12 @@
+{
+    "console": [
+        {
+            "type": "message",
+            "value": "Loaded the built-in macros."
+        },
+        {
+            "type": "error",
+            "value": "Timeout while trying to extract the story data."
+        }
+    ]
+}

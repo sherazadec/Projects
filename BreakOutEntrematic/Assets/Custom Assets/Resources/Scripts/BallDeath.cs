@@ -5,21 +5,33 @@ using UnityEngine.SceneManagement;
 
 public class BallDeath : MonoBehaviour {
 
-    private bool isInDeathZone = false;
-    
+    //private bool isInDeathZone = false;
+    public Transform startLocation;
     private int lives = 3;
+    public GameObject AngryBall;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void Start()
     {
-        isInDeathZone = true;
-        print("You Lose");
-        lives -= 1;
+        AngryBall = GameObject.FindGameObjectWithTag("AngryBall");
+    }
 
-        if (lives <= 0)
+ 
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        lives -= 1;
+        Debug.Log("I lost a life");
+
+        if (col.gameObject.tag == "DeathZone")
         {
-            //SceneManager.LoadScene("GameOver");
-            print("Game Over");
+            transform.position = startLocation.position;
+            Debug.Log("I'm respawning");
         }
+       
+        //if (lives == 0)
+        //{
+        //    //SceneManager.LoadScene("GameOver");
+        //    //print("Game Over");
+        //}
 
     }
 }

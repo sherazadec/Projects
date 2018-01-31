@@ -20,10 +20,11 @@ public class BallDeath : MonoBehaviour {
     {
         lives -= 1;
         Debug.Log("I lost a life");
-
+       
+    
         if (col.gameObject.tag == "DeathZone")
         {
-            transform.position = startLocation.position;
+            AngryBall.transform.position = startLocation.position;
             Debug.Log("I'm respawning");
         }
        

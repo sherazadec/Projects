@@ -6,7 +6,7 @@ public class PlatformMovement : MonoBehaviour {
 
     // Movement Speed
     public float speed = 150;
-
+ 
     private void FixedUpdate()
     {
         //Horizontal Movement input
@@ -14,5 +14,6 @@ public class PlatformMovement : MonoBehaviour {
 
         // Set Velocity (movement direction * speed)
         GetComponent<Rigidbody2D>().velocity = Vector2.right * h * speed;
+       
     }
 }

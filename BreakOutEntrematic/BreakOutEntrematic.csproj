@@ -290,6 +290,7 @@
   <ItemGroup>
     <Compile Include="Assets\Custom Assets\Resources\Scripts\BallDeath.cs" />
     <Compile Include="Assets\Custom Assets\Resources\Scripts\BallMovement.cs" />
+    <Compile Include="Assets\Custom Assets\Resources\Scripts\DeathZone.cs" />
     <Compile Include="Assets\Custom Assets\Resources\Scripts\EmojiDestruction.cs" />
     <Compile Include="Assets\Custom Assets\Resources\Scripts\GameManager.cs" />
     <Compile Include="Assets\Custom Assets\Resources\Scripts\PlatformMovement.cs" />

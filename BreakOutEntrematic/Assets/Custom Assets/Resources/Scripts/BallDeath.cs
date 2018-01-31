@@ -24,6 +24,7 @@ public class BallDeath : MonoBehaviour {
     
         if (col.gameObject.tag == "DeathZone")
         {
+            GameManager.instance.LoseLife();
             AngryBall.transform.position = startLocation.position;
             Debug.Log("I'm respawning");
         }

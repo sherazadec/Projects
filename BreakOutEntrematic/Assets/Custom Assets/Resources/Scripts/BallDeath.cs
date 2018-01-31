@@ -27,12 +27,6 @@ public class BallDeath : MonoBehaviour {
             AngryBall.transform.position = startLocation.position;
             Debug.Log("I'm respawning");
         }
-       
-        //if (lives == 0)
-        //{
-        //    //SceneManager.LoadScene("GameOver");
-        //    //print("Game Over");
-        //}
 
     }
 }

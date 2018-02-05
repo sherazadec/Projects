@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public GameObject deathParticles;
     public static GameManager instance = null;
 
-    private GameObject clonePlatform;
+    public GameObject clonePlatform;
 
     // Use this for initialization
     void Awake()
@@ -64,15 +64,16 @@ public class GameManager : MonoBehaviour
 
     public void LoseLife()
     {
-        lives--;
-        livesText.text = "Lives: " + lives;
+        livesText.text = "Lives: " + --lives;
+        
+        
         Instantiate(deathParticles, clonePlatform.transform.position, Quaternion.identity);
         Destroy(clonePlatform);
         Invoke("SetupPlatform", resetDelay);
         CheckGameOver();
     }
 
-    void SetupPaddle()
+    void SetupPlatform()
     {
         clonePlatform = Instantiate(platform, transform.position, Quaternion.identity) as GameObject;
     }

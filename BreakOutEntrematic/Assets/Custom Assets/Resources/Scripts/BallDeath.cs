@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class BallDeath : MonoBehaviour {
-
-    //private bool isInDeathZone = false;
-    public Transform startLocation;
-    private int lives = 3;
+public class BallDeath : MonoBehaviour
+{
+    //public Transform startLocation;
     public GameObject AngryBall;
 
     private void Start()
@@ -15,19 +13,10 @@ public class BallDeath : MonoBehaviour {
         AngryBall = GameObject.FindGameObjectWithTag("AngryBall");
     }
 
- 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        lives -= 1;
-        Debug.Log("I lost a life");
-       
-    
-        if (col.gameObject.tag == "DeathZone")
-        {
-            GameManager.instance.LoseLife();
-            AngryBall.transform.position = startLocation.position;
-            Debug.Log("I'm respawning");
-        }
-
+        GameManager.instance.LoseLife();
+        //AngryBall.transform.position = startLocation.position;
+        Debug.Log("I'm respawning");
     }
 }

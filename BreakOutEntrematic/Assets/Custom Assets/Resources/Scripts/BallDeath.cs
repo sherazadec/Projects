@@ -17,6 +17,6 @@ public class BallDeath : MonoBehaviour
     {
         GameManager.instance.LoseLife();
         //AngryBall.transform.position = startLocation.position;
-        Debug.Log("I'm respawning");
+        //Debug.Log("I'm respawning");
     }
 }

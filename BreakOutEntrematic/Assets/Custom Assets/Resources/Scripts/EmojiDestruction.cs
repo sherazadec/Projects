@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EmojiDestruction : MonoBehaviour {
 
     public GameObject BrickEmoji;
     public GameObject brickParticle;
-
+    
     //was to be used to instantiate the brick emojis automatically with a game manager 
     //but went for a different more efficient method instead
     //void Start()
@@ -24,9 +25,9 @@ public class EmojiDestruction : MonoBehaviour {
         if (gameObject.tag == "BrickEmoji")
         {
             Instantiate(brickParticle, transform.position, Quaternion.identity);
-            //GameManager.instance.DestroyBrick();
             Destroy(gameObject);
+           
         }
-       
+
     }
 }

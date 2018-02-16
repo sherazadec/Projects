@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
-    public int lives = 3;
-    public int BrickEmoji = 24;
+    private int lives = 3;
+    private int brickEmojis = 24;
     public float resetDelay = 1f;
     public Text livesText;
     public GameObject gameOver;
@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public GameObject platform;
     public GameObject deathParticles;
     public static GameManager instance = null;
+
+
 
     public GameObject clonePlatform;
 
@@ -38,9 +40,9 @@ public class GameManager : MonoBehaviour
         Instantiate(brickEmojiPrefab, transform.position, Quaternion.identity);
     }
 
-    void CheckGameOver()
+    public void CheckGameOver()
     {
-        if (BrickEmoji < 1)
+        if (brickEmojis < 1)
         {
             youWon.SetActive(true);
             Time.timeScale = .25f;
@@ -65,9 +67,9 @@ public class GameManager : MonoBehaviour
     public void LoseLife()
     {
         livesText.text = "Lives: " + --lives;
-        
-        
-        Instantiate(deathParticles, clonePlatform.transform.position, Quaternion.identity);
+
+
+        //Instantiate(deathParticles, clonePlatform.transform.position, Quaternion.identity);
         Destroy(clonePlatform);
         Invoke("SetupPlatform", resetDelay);
         CheckGameOver();
@@ -78,9 +80,9 @@ public class GameManager : MonoBehaviour
         clonePlatform = Instantiate(platform, transform.position, Quaternion.identity) as GameObject;
     }
 
-    public void DestroyBrick()
-    {
-        BrickEmoji--;
-        CheckGameOver();
-    }
+    //public void DestroyBrick()
+    //{
+       // brickEmojis--;
+        //CheckGameOver();
+    //}
 }

@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
-    private int lives = 3;
+    private int lives = 5;
     private int brickEmojis = 24;
     public float resetDelay = 1f;
     public Text livesText;
@@ -40,29 +40,37 @@ public class GameManager : MonoBehaviour
         Instantiate(brickEmojiPrefab, transform.position, Quaternion.identity);
     }
 
+    IEnumerator Win()
+    {
+        yield return new WaitForSeconds(1.0f);
+        SceneManager.LoadScene("WinScene");
+    }
+
     public void CheckGameOver()
     {
         if (brickEmojis < 1)
         {
             youWon.SetActive(true);
             Time.timeScale = .25f;
-            Invoke("Reset", resetDelay);
+            StartCoroutine(Win());
+            //Invoke("Reset", resetDelay);
         }
 
         if (lives < 1)
         {
             gameOver.SetActive(true);
             Time.timeScale = .25f;
-            Invoke("Reset", resetDelay);
+            //Invoke("Reset", resetDelay);
         }
 
     }
 
-    void Reset()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("GameScene");
-    }
+    //used to reset the game but not needed here - I leave it just in case
+    //void Reset()
+    //{
+    //    Time.timeScale = 1.7f;
+    //    SceneManager.LoadScene("GameScene");
+    //}
 
     public void LoseLife()
     {
@@ -80,9 +88,9 @@ public class GameManager : MonoBehaviour
         clonePlatform = Instantiate(platform, transform.position, Quaternion.identity) as GameObject;
     }
 
-    //public void DestroyBrick()
-    //{
-       // brickEmojis--;
-        //CheckGameOver();
-    //}
+    public void DestroyBrick()
+    {
+        brickEmojis--;
+        CheckGameOver();
+    }
 }

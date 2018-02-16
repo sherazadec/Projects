@@ -25,6 +25,7 @@ public class EmojiDestruction : MonoBehaviour {
         if (gameObject.tag == "BrickEmoji")
         {
             Instantiate(brickParticle, transform.position, Quaternion.identity);
+            GameManager.instance.DestroyBrick();
             Destroy(gameObject);
            
         }
